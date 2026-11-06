@@ -1,7 +1,7 @@
 name: YAML error
 on: push
-jobs:
-  runs:
+job:
+  run:
     runs-on: ubuntu-latest
     steps:
       - run: echo "YAML Syntax Error"
