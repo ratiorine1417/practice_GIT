@@ -1,5 +1,5 @@
 ruff
 pytest
-pytest - cov
+pytest-cov
 fastapi
 httpx
