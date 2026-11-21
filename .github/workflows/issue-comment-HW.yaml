@@ -1,28 +1,28 @@
-name: Create Issue on Push
+# name: Create Issue on Push
 
-on:
-  push:
+# on:
+#   push:
 
-permissions:
-  issues: write
+# permissions:
+#   issues: write
 
-jobs:
-  create-issue:
-    runs-on: ubuntu-latest
+# jobs:
+#   create-issue:
+#     runs-on: ubuntu-latest
 
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ISSUE_TITLE: "새로운 Push 이벤트 발생"
+#     env:
+#       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       ISSUE_TITLE: "새로운 Push 이벤트 발생"
 
-    steps:
-      - name: Create Issue with GitHub CLI
-        run: |
-          gh api \
-            --method POST \
-            "repos/$GITHUB_REPOSITORY/issues" \
-            -f title="$ISSUE_TITLE" \
-            -f body="Push 이벤트가 발생했습니다.
+#     steps:
+#       - name: Create Issue with GitHub CLI
+#         run: |
+#           gh api \
+#             --method POST \
+#             "repos/$GITHUB_REPOSITORY/issues" \
+#             -f title="$ISSUE_TITLE" \
+#             -f body="Push 이벤트가 발생했습니다.
 
-            브랜치: $GITHUB_REF_NAME
-            커밋 SHA: $GITHUB_SHA" \
-            --jq '.html_url'
+#             브랜치: $GITHUB_REF_NAME
+#             커밋 SHA: $GITHUB_SHA" \
+#             --jq '.html_url'
