@@ -1,6 +1,6 @@
 import pytest
 
-from orderlab.pricing import subtotal  # , final_total
+from orderlab.pricing import subtotal
 
 
 def test_subtotal_normal():
@@ -16,6 +16,7 @@ def test_subtotal_negative():
         subtotal(-100, 2)
 
 
+# , final_total
 # def test_discount_below_zero():
 #     with pytest.raises(ValueError):
 #         final_total(10_000, 2, -1)
