@@ -1,6 +1,6 @@
 import pytest
 
-from orderlab.pricing import subtotal, final_total
+from orderlab.pricing import subtotal #, final_total
 
 
 def test_subtotal_normal():
