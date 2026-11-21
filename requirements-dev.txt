@@ -1,4 +1,5 @@
-fastapi
-pytest
 ruff
+pytest
+pytest - cov
+fastapi
 httpx
