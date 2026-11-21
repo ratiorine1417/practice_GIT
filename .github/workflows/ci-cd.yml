@@ -16,7 +16,7 @@ jobs:
       - run: ruff format --check .
       - run: python -m pytest -q
   deploy:
-    if: github.event_name == "push"
+    if: github.event_name == 'push'
     needs: quality
     runs-on: ubuntu-latest
     permissions:
